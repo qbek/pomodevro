@@ -1,6 +1,7 @@
 {
   "globalDependencies": {
     "chai": "registry:dt/chai#3.4.0+20160601211834",
+    "chai-http": "registry:dt/chai-http#0.0.0+20160317120654",
     "express": "registry:dt/express#4.0.0+20160708185218",
     "mocha": "registry:dt/mocha#2.2.5+20161028141524",
     "node": "registry:dt/node#6.0.0+20161110151007",

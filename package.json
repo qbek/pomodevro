@@ -17,14 +17,17 @@
   },
   "homepage": "https://github.com/qbek/pomodevro#readme",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "express-handlebars": "^3.0.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
     "eslint": "^3.9.1",
     "grunt": "^1.0.1",
     "grunt-mocha-test": "^0.13.2",
+    "grunt-nodemon": "^0.4.2",
     "jsonfile": "^2.4.0",
     "mocha": "^3.1.2"
   }
