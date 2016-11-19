@@ -3,8 +3,11 @@
     "chai": "registry:dt/chai#3.4.0+20160601211834",
     "chai-http": "registry:dt/chai-http#0.0.0+20160317120654",
     "express": "registry:dt/express#4.0.0+20160708185218",
+    "jquery": "registry:dt/jquery#1.10.0+20160929162922",
     "mocha": "registry:dt/mocha#2.2.5+20161028141524",
     "node": "registry:dt/node#6.0.0+20161110151007",
-    "node-fetch": "registry:dt/node-fetch#0.0.0+20160711094047"
+    "node-fetch": "registry:dt/node-fetch#0.0.0+20160711094047",
+    "socket.io": "registry:dt/socket.io#1.4.4+20160909205835",
+    "socket.io-client": "registry:dt/socket.io-client#1.4.4+20160317120654"
   }
 }

@@ -2,6 +2,14 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
+    nodemon: {
+      test: {
+        options: {
+          cwd: 'src',
+        },
+        script: 'pomodevro.js'
+      }
+    },
     mochaTest: {
       test: {
         options: {
@@ -13,10 +21,12 @@ module.exports = function(grunt) {
         },
         src: ['test/**/*.spec.js'],
       },
-    }
+    },
   });
 
   grunt.loadNpmTasks('grunt-mocha-test');
+  grunt.loadNpmTasks('grunt-nodemon');
+
   // Default task(s).
   grunt.registerTask('default', ['mochaTest']);
 
