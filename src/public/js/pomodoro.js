@@ -20,6 +20,7 @@
       $(Timer).trigger('tiktak', toString(remaining));
       if (remaining === 0) {
         stopTimer();
+        $(Timer).trigger('finished');
         console.log('Timer ended');
       }
     };
@@ -53,7 +54,7 @@
       },
 
       status: () => status
-    }
+    };
 
     return Timer;
   }
@@ -64,14 +65,12 @@
       break: 5,
       longbreak: 15,
       longbreakafter: 4
-    }
+    };
 
     const session = {
       pomodoros: 0,
       breaks: 0
-    }
-
-
+    };
   }
   
   const timer = createTimer(25);
@@ -109,7 +108,6 @@
     }
   }
 
-
   $('#start').on('click', function () {
     timer.start();
     setButtonsState();
@@ -125,11 +123,21 @@
     setButtonsState();
   });
 
-  $(timer).on('tiktak', function(event, data) {
+  $(timer).on('tiktak', function (event, data) {
     $('#timer').html(data);
   });
 
+  const statsTemplate = Handlebars.compile($('#stats-template').html());
+  $('#stats').html(statsTemplate({pomodoros:0}));
+
+  $(timer).on('finished', function (event) {
+    $.getJSON('/pomodoro/collect')
+    .then( (json) => {
+      $('#stats').html(statsTemplate(json));
+    });
+  });
+
   setButtonsState();
-})()
+})();
 
 

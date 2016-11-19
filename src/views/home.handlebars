@@ -11,12 +11,18 @@
 </div>
 <div class="row">
   <div class="medium-6 medium-offset-3 columns">
-    <table>
-      <tr>
-        <td>Finished</td>
-        <td>0</td>
-      </tr>
-        
+    <table id="stats">
     </table>
   </div>
 </div>
+
+<script id="stats-template" type="text/x-handlebars-template">
+  <tr>
+    <td>Collected pomodoros</td>
+    <td>\{{pomodoros.collected}}</td>
+  </tr>
+  <tr>
+    <td>Eaten pomodoros</td>
+    <td>\{{pomodoros.eaten}}</td>
+  </tr>
+</script>
